@@ -11,7 +11,7 @@
     name : string, null: false, index: true  
     
   3. Association    
-    has\_many :groups, through: :user\_groups  
+    has\_many :groups, through: :group\_users  
     has\_many :messages, dependent: :destroy  
     has\_many :users_groups  
       
@@ -24,9 +24,9 @@
       name : string, null: false
     
   3. Association  
-    has\_many :users, through: :user\_groups  
+    has\_many :users, through: :group\_users  
     has\_many :messages, dependent: :destroy  
-    has\_many :user\_groups
+    has\_many :group\_users
       
 3. Message model  
     
@@ -42,9 +42,9 @@
     belongs\_to :user,  foreign_key: true  
     belongs\_to :group, foreign_key: true  
       
-4. UserGroup model
+4. GroupUser model
   1. Table  
-    users\_groups table  
+    group\_users table  
     
   2. Columns and types of columns  
     user\_id  :reference, foreign_key: true  
