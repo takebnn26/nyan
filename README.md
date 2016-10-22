@@ -13,7 +13,7 @@
   3. Association    
     has\_many :groups, through: :group\_users  
     has\_many :messages, dependent: :destroy  
-    has\_many :users_groups  
+    has\_many :group_users  
       
 2. Group model  
     
@@ -35,12 +35,13 @@
     
   2. Columns and types of columns  
     content   :text  
-    user\_id  :reference  
-    group\_id :reference  
+    image     :string  
+    user\_id  :reference,  foreign_key: true  
+    group\_id :reference, foreign_key: true  
     
   3. Association  
-    belongs\_to :user,  foreign_key: true  
-    belongs\_to :group, foreign_key: true  
+    belongs\_to :user  
+    belongs\_to :group  
       
 4. GroupUser model
   1. Table  
