@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
+gem 'haml-rails'
+gem 'erb2haml'
 
 #ユーザー管理
 gem 'devise'
