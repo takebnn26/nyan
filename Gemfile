@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'font-awesome-rails'
 
 #ユーザー管理
 gem 'devise'
